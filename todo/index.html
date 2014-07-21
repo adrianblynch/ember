@@ -14,12 +14,12 @@
 			</header>
 			<section id="main">
 				<ul id="todo-list">
-					{#each}
-						<li {bind-attr class="isCompleted:completed"}>
+					{{#each}}
+						<li {{bind-attr class="isCompleted:completed"}}>
 							<input type="checkbox" class="toggle">
-							<label>{title}</label><button class="destroy"></button>
+							<label>{{title}}</label><button class="destroy"></button>
 						</li>
-					{/each}
+					{{/each}}
 				</ul>
 				<input type="checkbox" id="toggle-all">
 			</section>
@@ -53,6 +53,6 @@
 	<script src="js/libs/ember-data-1.0.0.js"></script>
 	<script src="js/application.js"></script>
 	<script src="js/router.js"></script>
-	<!-- <script src="js/models/todo.js"></script> -->
+	<script src="js/models/todo.js"></script>
 </body>
 </html>
